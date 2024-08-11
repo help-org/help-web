@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  develop:
+    cmds:
+      - cmd: nvm use
+      - cmd: npm install
+  web:
+    cmds:
+      - cmd: npm run start
