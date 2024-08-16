@@ -8,3 +8,8 @@ tasks:
   web:
     cmds:
       - cmd: npm run start
+  docker:
+    cmds:
+      - cmd: docker rm $(docker stop $(docker ps -a -q --filter ancestor=directory-web)) || true
+      - cmd: docker build -t directory-web .
+      - cmd: docker compose up -d

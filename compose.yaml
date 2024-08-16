@@ -1,0 +1,7 @@
+name: directory-web
+services:
+  directory-api:
+    image: directory-web:latest
+    container_name: directory-web
+    ports:
+      - 8080:80
